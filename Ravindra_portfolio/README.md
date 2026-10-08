@@ -1,6 +1,6 @@
-# Ravindra Singh — Portfolio Website (static HTML version)
+# Ravindra Singh — data scientist Portfolio Website 
 
-Static HTML/CSS portfolio, ready for **GitHub Pages**.
+Static HTML/CSS portfolio, ready for a Data Scientist.
 Open `index.html` directly in a browser to preview — no server needed.
 
 ## Structure
