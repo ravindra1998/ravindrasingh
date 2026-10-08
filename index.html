@@ -3,9 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ravindra Singh — Data Scientist</title>
-<meta name="description" content="Data Scientist with 3+ years of experience in machine learning and analytics.">
-<link rel="stylesheet" href="css/style.css?v=22">
+<title>Ravindra Singh | Data Scientist – Machine Learning, Edge AI &amp; NLP</title>
+<meta name="description" content="Ravindra Singh is a Data Scientist with 3+ years of experience in machine learning, deep learning, embedded/edge AI, computer vision, speech processing and NLP. See projects, blog posts and resume.">
+<meta name="author" content="Ravindra Singh">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ravindra1998.github.io/ravindrasingh/">
+
+<!-- Social sharing previews (LinkedIn, WhatsApp, X, Facebook) -->
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Ravindra Singh | Data Scientist – Machine Learning, Edge AI &amp; NLP">
+<meta property="og:description" content="Data Scientist building lightweight deep learning models for embedded hardware: fall detection, wake word detection, face recognition and small language models.">
+<meta property="og:url" content="https://ravindra1998.github.io/ravindrasingh/">
+<meta property="og:image" content="https://ravindra1998.github.io/ravindrasingh/images/og-image.jpg">
+<meta property="og:site_name" content="Ravindra Singh">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@RaviFoujda">
+
+<link rel="icon" href="images/photo.webp" type="image/webp">
+<link rel="preload" as="image" href="images/home.jpg">
+<link rel="stylesheet" href="css/style.css?v=23">
+
+<!-- Structured data: tells Google who this site is about -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ravindra Singh",
+  "jobTitle": "Data Scientist",
+  "url": "https://ravindra1998.github.io/ravindrasingh/",
+  "image": "https://ravindra1998.github.io/ravindrasingh/images/og-image.jpg",
+  "email": "mailto:ravindradeeg95@gmail.com",
+  "worksFor": { "@type": "Organization", "name": "Ambient Scientific" },
+  "knowsAbout": ["Machine Learning", "Deep Learning", "Edge AI", "Embedded AI", "Computer Vision", "Speech Processing", "Natural Language Processing", "Small Language Models", "Python", "TensorFlow", "PyTorch"],
+  "sameAs": [
+    "https://www.linkedin.com/in/ravindra-singh-72136719b/",
+    "https://github.com/ravindra1998",
+    "https://x.com/RaviFoujda",
+    "https://www.youtube.com/@RavindraFoujdar",
+    "https://www.facebook.com/ravindrasingh.faujdar.5/"
+  ]
+}
+</script>
 </head>
 <body>
 <header>
@@ -42,7 +80,7 @@
     </div>
   </div>
   <div class="avatar">
-    <img src="images/photo.png" alt="Ravindra Singh">
+    <img src="images/photo.webp" alt="Ravindra Singh, Data Scientist" width="600" height="582">
   </div>
 </section></div>
 
@@ -99,7 +137,7 @@
       </div>
 
       <figure class="feature-img">
-        <img src="images/fall-detection.jpeg" alt="Fall Detection System">
+        <img src="images/fall-detection.jpeg" alt="Fall detection system using IMU sensor data and a CNN2D model" loading="lazy">
         <figcaption>Fall Detection System</figcaption>
       </figure>
     </div>
@@ -130,7 +168,7 @@
       </div>
 
       <figure class="feature-img">
-        <img src="images/wake-word.png" alt="Wake Word Detection System">
+        <img src="images/wake-word.png" alt="Wake word detection system using MFCC features and a GRU network" loading="lazy">
         <figcaption>Wake Word Detection System</figcaption>
       </figure>
     </div>
@@ -139,7 +177,7 @@
     <div class="feature-card">
       <h3>Face ID Recognition System</h3>
       <div class="pills">
-        <span class="pill">CNN</span><span class="pill">ESP32 Cam</span><span class="pill">Opencv</span>
+        <span class="pill">CNN</span><span class="pill">ESP32 Cam</span><span class="pill">OpenCV</span>
         <span class="pill">Computer Vision</span><span class="pill">Edge AI</span>
       </div>
       <p>Developed a Face ID Recognition System using image data collected through an ESP32 camera module for embedded biometric authentication. The project involved collecting and labeling facial image datasets, followed by preprocessing and augmentation to improve robustness under varying lighting and pose conditions.</p>
@@ -160,7 +198,7 @@
       </div>
 
       <figure class="feature-img">
-        <img src="images/face-detection.jpeg" alt="Face ID Recognition System">
+        <img src="images/face-detection.jpeg" alt="Face ID recognition on an ESP32 camera with a lightweight CNN" loading="lazy">
         <figcaption>Face ID Recognition System</figcaption>
       </figure>
     </div>
@@ -172,30 +210,29 @@
     <div class="card">
       <h3>Command Word Detection</h3>
       <div class="pills"><span class="pill">CNN</span><span class="pill">keras</span><span class="pill">tensorflow</span></div>
-      <p>Developed an GPX-10 command word detection system using MFCC-based audio features, trained a lightweight deep learning model for voice command recognition, deployed real-time inference on hardware.</p>
+      <p>Developed a GPX10 command word detection system using MFCC-based audio features, trained a lightweight deep learning model for voice command recognition, deployed real-time inference on hardware.</p>
       <div class="result">↳ Achieved 97% command recognition accuracy with real-time on-device inference.</div>
-      <p style="margin-top:12px"><a href="#">GitHub →</a> · <a href="#">Write-up →</a></p>
     </div>
     <div class="card">
       <h3>Small Language Model</h3>
       <div class="pills"><span class="pill">Transformer</span><span class="pill">Tokenization</span><span class="pill">NLP</span></div>
       <p>Designed and deployed a decoder-based healthcare chatbot on GPX10 using a compact SLM (&lt;100K parameters), enabling efficient edge-AI conversational assistance with 89% accuracy and low-resource operation.</p>
       <div class="result">↳ Achieved 89% accuracy</div>
-      <p style="margin-top:12px"><a href="#">GitHub →</a> · <a href="#">Write-up →</a></p>
+      <p style="margin-top:12px"><a href="blog/small-language-models.html">Read the write-up →</a></p>
     </div>
     <div class="card">
       <h3>Melbourne House Price Prediction</h3>
       <div class="pills"><span class="pill">Regression</span><span class="pill">ML</span><span class="pill">pandas</span></div>
       <p>Developed a house price prediction model using regression techniques on the Melbourne Housing Dataset, performing data preprocessing, feature engineering, and model evaluation to generate accurate property price estimates.</p>
-      <div class="result">↳ 98% accuracy · correct house price prediction</div>
-      <p style="margin-top:12px"><a href="#">GitHub →</a> · <a href="#">Write-up →</a></p>
+      <div class="result">↳ 98% accuracy on house price prediction</div>
+      <p style="margin-top:12px"><a href="https://github.com/ravindra1998/Melbourne-House-Prediction" target="_blank" rel="noopener">View code on GitHub →</a></p>
     </div>
     <div class="card">
       <h3>Face mask Recognition</h3>
       <div class="pills"><span class="pill">CNN</span><span class="pill">OpenCV</span><span class="pill">Computer vision</span></div>
       <p>Developed a face mask detection system using a CNN model to classify masked and unmasked individuals, enabling real-time inference on embedded hardware.</p>
-      <div class="result">↳ Achivwd 96% accuracy</div>
-      <p style="margin-top:12px"><a href="#">GitHub →</a> · <a href="#">Write-up →</a></p>
+      <div class="result">↳ Achieved 96% accuracy</div>
+      <p style="margin-top:12px"><a href="https://github.com/ravindra1998/Face_Mask_Detection" target="_blank" rel="noopener">View code on GitHub →</a></p>
     </div>
   </div>
 </section></div>
