@@ -291,12 +291,13 @@
 <div class="wrap"><section id="contact">
   <h2 style="text-align:center">Contact Us</h2>
   <p class="lead" style="text-align:center">Let's discuss your training goals, product ideas, or hiring needs.</p>
+  <p class="form-msg" id="form-msg" hidden></p>
 
   <div class="contact-grid">
     <!-- LEFT: inquiry form -->
     <div class="glass-card">
       <h4>Send an Inquiry</h4>
-      <form method="post" action="https://formsubmit.co/ravindradeeg95@gmail.com" class="form-grid">
+      <form method="post" action="https://formsubmit.co/ravindradeeg95@gmail.com" class="form-grid" id="contact-form">
         <input type="hidden" name="_subject" value="Portfolio inquiry">
         <input type="hidden" name="_template" value="table">
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
@@ -367,6 +368,36 @@
   document.getElementById('year').textContent = new Date().getFullYear();
   document.querySelectorAll('#nav a').forEach(function(a){
     a.addEventListener('click', function(){ document.getElementById('nav').classList.remove('open'); });
+  });
+
+  /* Contact form: send in the background so visitors stay on this page */
+  var form = document.getElementById('contact-form');
+  var msg  = document.getElementById('form-msg');
+  form.addEventListener('submit', function(ev){
+    ev.preventDefault();
+    var btn = form.querySelector('button[type=submit]');
+    btn.disabled = true; btn.textContent = 'Sending...';
+    fetch(form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/'), {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    })
+    .then(function(r){ return r.json(); })
+    .then(function(data){
+      if (String(data.success) !== 'true') throw new Error(data.message);
+      msg.className = 'form-msg ok';
+      msg.textContent = 'Thanks! Your message has been received.';
+      form.reset();
+    })
+    .catch(function(){
+      msg.className = 'form-msg err';
+      msg.textContent = 'Sorry, something went wrong. Please email me directly at ravindradeeg95@gmail.com.';
+    })
+    .finally(function(){
+      msg.hidden = false;
+      btn.disabled = false; btn.textContent = 'Send Message';
+      msg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
   });
 </script>
 </body>
